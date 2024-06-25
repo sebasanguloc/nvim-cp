@@ -14,6 +14,9 @@ return {
                 }
             }
         })
-        require("lspconfig").clangd.setup({})
+        require("lspconfig").clangd.setup({
+            cmd = {"clangd", "--background-index"},
+            filetypes = {"cpp"},
+        })
     end
 }
